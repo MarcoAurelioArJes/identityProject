@@ -8,7 +8,7 @@ namespace IdentityProject.Controllers
     public class AcessoController : ControllerBase
     {
         [HttpGet]
-        [Authorize]
+        [Authorize(Policy = "IdadeMinima")]
         public IActionResult Get()
         {
             return Ok("Acesso Permitido!!!");
